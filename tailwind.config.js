@@ -10,6 +10,8 @@ export default {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/js/**/*.vue',
+        'node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx,vue}',
+        'node_modules/flowbite/**/*.{js,jsx,ts,tsx}'
     ],
 
     theme: {
@@ -20,5 +22,9 @@ export default {
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [
+        forms,
+        typography,
+        require('flowbite/plugin')
+    ],
 };
