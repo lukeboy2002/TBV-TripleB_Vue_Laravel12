@@ -6,7 +6,7 @@ import Banner from '@/Components/Banner.vue';
 import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import LinkResponsiveNav from '@/Components/LinkResponsiveNav.vue';
 
 defineProps({
     title: String,
@@ -140,9 +140,9 @@ const logout = () => {
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}"
                      class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink :active="route().current('dashboard')" :href="route('dashboard')">
+                        <LinkResponsiveNav :active="route().current('dashboard')" :href="route('dashboard')">
                             Dashboard
-                        </ResponsiveNavLink>
+                        </LinkResponsiveNav>
                     </div>
 
                     <!-- Responsive Settings Options -->
@@ -165,15 +165,15 @@ const logout = () => {
                         </div>
 
                         <div class="mt-3 space-y-1">
-                            <ResponsiveNavLink :active="route().current('profile.show')" :href="route('profile.show')">
+                            <LinkResponsiveNav :active="route().current('profile.show')" :href="route('profile.show')">
                                 Profile
-                            </ResponsiveNavLink>
+                            </LinkResponsiveNav>
 
                             <!-- Authentication -->
                             <form method="POST" @submit.prevent="logout">
-                                <ResponsiveNavLink as="button">
+                                <LinkResponsiveNav as="button">
                                     Log Out
-                                </ResponsiveNavLink>
+                                </LinkResponsiveNav>
                             </form>
 
                         </div>
